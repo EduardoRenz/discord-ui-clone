@@ -9,7 +9,7 @@ export const Container = styled.div`
     max-height: calc(100vh - 46px);
     overflow-y:scroll;
     ::-webkit-scrollbar {
-        width:4px;
+        width:2px;
     }
     ::-webkit-scrollbar-thumb {
         background-color:var(--tertiary);
@@ -19,10 +19,9 @@ export const Container = styled.div`
     ::-webkit-scrollbar-track {
         background-color:var(--secondary);
     }
-    scrollbar-width: 4px;
-
-
-
+    scrollbar-width: thin;
+    scrollbar-color:var(--tertiary);
+ 
 `;
 export const Role = styled.div`
     margin-top:20px;
