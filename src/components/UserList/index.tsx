@@ -1,13 +1,20 @@
 import React from 'react'
 import { Container, Role, User, Avatar  } from './styles'
 
+interface UserProps {
+    nickname:String
+    isBot?:Boolean
+}
 
-const UserRow : React.FC = () =>{
-    <User>
-        <Avatar />
+const UserRow : React.FC<UserProps>= ({nickname,isBot}) =>{
+    return (
+        <User>
+        <Avatar className={isBot ? 'bot' : ''} />
         <strong>{nickname}</strong>
         {isBot && <span>Bot</span>}
-    </User>
+        </User>
+    )
+
 }
 
 const UserList : React.FC = () =>{
@@ -16,13 +23,13 @@ const UserList : React.FC = () =>{
            <Role>
                Disponivel - 1
            </Role>
-           <UserRow></UserRow>
+           <UserRow nickname="Eduardo"></UserRow>
 
 
            <Role>
                Offline - 18
            </Role>
-           <UserRow isBot></UserRow>
+           <UserRow nickname="André" isBot></UserRow>
 
        </Container>
     )
