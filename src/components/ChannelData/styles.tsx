@@ -7,6 +7,7 @@ export const Container = styled.div`
     flex-direction:column;
     justify-content:space-between;
     background-color:var(--primary);
+    height:100%;
 
 `;
 export const Messages = styled.div`
@@ -14,6 +15,7 @@ export const Messages = styled.div`
     display:flex;
     flex-direction:column;
     max-height:calc(100vh - 46px - 67px);
+    min-height:calc(100vh - 46px - 67px);
     overflow-y:scroll;
 
     ::-webkit-scrollbar {

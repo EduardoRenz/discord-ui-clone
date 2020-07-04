@@ -28,6 +28,7 @@ export const Role = styled.div`
     text-transform:uppercase;
     font-size:12px;
     font-weight:500;
+    color:var(--gray);
 
 `;
 export const User = styled.div`
