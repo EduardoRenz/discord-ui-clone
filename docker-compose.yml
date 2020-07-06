@@ -1,0 +1,41 @@
+version: '3.7'
+services:
+    db:
+        image: postgres
+        restart: always
+        container_name: db            
+        ports: 
+            - '5433:5432'
+        environment: 
+            POSTGRES_DB: 'teste'
+            POSTGRES_USER: 'teste'
+            POSTGRES_PASSWORD: 'teste'
+
+    app:
+        container_name: frontend
+        build: 
+            "./frontend"
+        volumes: 
+            - './frontend:/usr/app'
+            - '/app/node_modules'
+        ports:
+            - '3000:3000'
+        environment:
+            - NODE_ENV=development            
+        stdin_open: true
+        # depends_on: 
+        #     - db
+        
+
+    
+    # server:
+    #     build: 
+    #         "./server"
+    #     container_name: server
+    #     restart: always
+    #     volumes: 
+    #         - ./server:/usr/server
+
+
+        
+            
