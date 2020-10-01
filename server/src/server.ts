@@ -4,8 +4,7 @@
  * yarn dev = roda nodemon (pre configurado no package.json)
  */
 
-import { PrismaClient } from "@prisma/client"
-const prisma = new PrismaClient()
+import prisma from 'prisma/client'
 import server from './graphql'
 
 

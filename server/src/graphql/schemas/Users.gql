@@ -1,0 +1,10 @@
+   
+  type User {
+    title: String
+    author: String
+  }
+
+  type Query {
+    Users: [User]
+  }
+  
